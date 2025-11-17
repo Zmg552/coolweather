@@ -35,7 +35,15 @@ dependencies {
 
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0") // 建议使用最新稳定版本
+    implementation("com.google.code.gson:gson:2.7") //解析json数据使用的
+    implementation("org.litepal.guolindev:core:3.2.3") // 推荐使用最新稳定版本
+    implementation("com.github.bumptech.glide:glide:3.7.0")
+    implementation("org.greenrobot:greendao:3.3.0")
+
 }
