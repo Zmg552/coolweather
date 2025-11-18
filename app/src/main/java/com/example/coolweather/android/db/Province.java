@@ -1,31 +1,22 @@
 package com.example.coolweather.android.db;
 
-public class Province {
-    int id;
+import com.google.gson.annotations.SerializedName;
+
+import org.litepal.crud.LitePalSupport;
+import org.litepal.annotation.Column;
+
+public class Province extends LitePalSupport {
+    private int localId;
+    @SerializedName("name") // 与JSON字段匹配
     String provinceName;
-    int ProvinceCode;
 
-    public int getId(){
-        return id;
-    }
+    @SerializedName("id")
+    int provinceCode;
 
-    public String getProvinceName(){
-        return provinceName;
-    }
-
-    public int getProvinceCode(){
-        return ProvinceCode;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName;
-    }
-
-    public void setProvinceCode(int provinceCode) {
-        ProvinceCode = provinceCode;
-    }
+    public int getLocalId(){ return localId; }
+    public void setLocalId(int localId){ this.localId = localId; }
+    public int getProvinceCode() { return provinceCode; }
+    public void setProvinceCode(int provinceCode) { this.provinceCode = provinceCode; }
+    public String getProvinceName() { return provinceName; }
+    public void setProvinceName(String provinceName) { this.provinceName = provinceName; }
 }

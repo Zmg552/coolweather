@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
-<dbname value="cool_weather" />
-<version value="1" />
-<list>
-    <!-- 在这里配置映射的实体类 -->
-    <mapping class = "package com.example.coolweather.android.db.Province"/>
-    <mapping class = "package com.example.coolweather.android.db.City"/>
-    <mapping class = "package com.example.coolweather.android.db.County"/>
-</list>
+    <dbname value="cool_weather.db" /> <!-- 数据库名可自定义，无需和包名一致 -->
+    <version value="1" /> <!-- 版本号初始为1，后续改表结构需递增 -->
+    <list>
+        <!-- 必须是完整包路径，包括 android.db 层级 -->
+        <mapping class="com.example.coolweather.android.db.Province" />
+        <mapping class="com.example.coolweather.android.db.City" />
+        <mapping class="com.example.coolweather.android.db.County" />
+    </list>
 </litepal>
 
-    <!-- 将数据库名改为cool_weather
+    <!-- 将数据库名改为cool_weather.db
              将数据库版本改为1
              并将实体类添加到映射列表中 -->

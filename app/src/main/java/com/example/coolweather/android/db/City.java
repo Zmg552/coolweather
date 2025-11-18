@@ -1,17 +1,26 @@
 package com.example.coolweather.android.db;
 
-public class City {
-    int id;
+import com.google.gson.annotations.SerializedName;
+
+import org.litepal.crud.LitePalSupport;
+
+public class City extends LitePalSupport {
+    int localId;
+
+    @SerializedName("name") // 与JSON字段匹配
     String cityName;
+
+    @SerializedName("id") // 与JSON字段匹配
     int cityCode;
+
     int provinceId;
 
-    public int getId() {
-        return id;
+    public int getLocalId() {
+        return localId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setLocalId(int id) {
+        this.localId = id;
     }
 
     public String getCityName() {
